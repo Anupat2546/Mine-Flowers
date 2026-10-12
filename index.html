@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mine Flowerz | ร้านดอกไม้</title>
+<meta name="description" content="ร้านดอกไม้ Mine Flowerz ช่อดอกไม้สด งานประณีต สำหรับทุกโอกาส">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#" class="logo" id="logo">Mine Flowerz</a>
+  <nav>
+    <a href="#collection">คอลเลกชัน</a>
+    <a href="#how">วิธีสั่งซื้อ</a>
+    <a href="#social">ติดตามเรา</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+  <a href="#collection" class="btn btn-gold sm">สั่งดอกไม้</a>
+</header>
+
+<section class="hero">
+  <div class="bubble" style="width:120px;height:120px;top:18%;left:8%"></div>
+  <div class="bubble" style="width:70px;height:70px;top:60%;left:85%;animation-delay:-4s"></div>
+  <div class="bubble" style="width:40px;height:40px;top:30%;left:75%;animation-delay:-8s"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">Fresh Flowers · Handcrafted with Love</p>
+    <h1 id="heroTitle">ดอกไม้ทุกช่อ จัดด้วยหัวใจ</h1>
+    <p class="sub" id="heroSub"></p>
+    <div class="hero-cta">
+      <a href="#collection" class="btn btn-gold">ดูช่อดอกไม้</a>
+      <a data-link="line_url" target="_blank" rel="noopener" class="btn btn-ghost">สั่งผ่าน LINE</a>
+    </div>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 2880 120" preserveAspectRatio="none">
+      <path fill="#f8fcfd" d="M0 60 C360 0 720 120 1440 60 C1800 0 2160 120 2880 60 V120 H0Z"/>
+    </svg>
+  </div>
+</section>
+
+<section class="block" id="collection">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Our Collection</p>
+      <h2>คอลเลกชันดอกไม้</h2>
+      <div class="divider"></div>
+      <p>เลือกช่อที่ใช่ แตะเพื่อดูรายละเอียดและสั่งซื้อได้ทันที</p>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"><p class="empty">กำลังโหลด...</p></div>
+  </div>
+</section>
+
+<section class="block bg-mist" id="how">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">How to Order</p>
+      <h2>สั่งง่ายใน 3 ขั้นตอน</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="num">1</div><h3>เลือกช่อดอกไม้</h3><p>เลือกแบบที่ชอบจากคอลเลกชัน หรือทักมาให้จัดตามธีมที่ต้องการ</p></div>
+      <div class="step"><div class="num">2</div><h3>กรอกรายละเอียด</h3><p>ระบุวันที่ต้องการรับ ที่อยู่จัดส่ง และข้อความบนการ์ด</p></div>
+      <div class="step"><div class="num">3</div><h3>ส่งให้ร้านทาง LINE</h3><p>ระบบสรุปออเดอร์ให้ กดส่งทาง LINE แล้วรอร้านยืนยันได้เลย</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="social">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Follow Us</p>
+      <h2>ติดตามผลงานของเรา</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="socials reveal">
+      <a class="social" data-link="facebook" target="_blank" rel="noopener"><small>FACEBOOK</small><h3>Mine Flowerz</h3><span>ดูรีวิวและผลงานล่าสุด →</span></a>
+      <a class="social" data-link="instagram" target="_blank" rel="noopener"><small>INSTAGRAM</small><h3>@mine_flowerz</h3><span>แกลเลอรีช่อดอกไม้สวยๆ →</span></a>
+      <a class="social" data-link="tiktok" target="_blank" rel="noopener"><small>TIKTOK</small><h3>@mine.flower5</h3><span>คลิปเบื้องหลังการจัดดอกไม้ →</span></a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container foot">
+    <div>
+      <div class="logo" data-text="shop_name">Mine Flowerz</div>
+      <p style="margin-top:10px;opacity:.75">ดอกไม้สดคัดพิเศษ จัดด้วยความใส่ใจในทุกรายละเอียด</p>
+    </div>
+    <div>
+      <h4>ติดต่อเรา</h4>
+      <p>โทร: <a data-tel data-text="phone"></a></p>
+      <p data-text="open_hours"></p>
+      <p data-text="address"></p>
+    </div>
+    <div>
+      <h4>ช่องทางออนไลน์</h4>
+      <p><a data-link="line_url" target="_blank" rel="noopener">LINE</a></p>
+      <p><a data-link="facebook" target="_blank" rel="noopener">Facebook</a></p>
+      <p><a data-link="instagram" target="_blank" rel="noopener">Instagram</a></p>
+      <p><a data-link="tiktok" target="_blank" rel="noopener">TikTok</a></p>
+    </div>
+  </div>
+  <p class="copy">© <span id="year"></span> Mine Flowerz. All rights reserved.</p>
+</footer>
+
+<a class="float-line" data-link="line_url" target="_blank" rel="noopener" aria-label="LINE">LINE</a>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="modal-img" id="mImg"></div>
+    <div class="modal-body">
+      <button class="close" aria-label="ปิด">&times;</button>
+      <p class="eyebrow" id="mCat" style="color:var(--aqua);margin:0"></p>
+      <h2 id="mName" style="color:var(--navy);font-size:2rem"></h2>
+      <p id="mPrice" style="color:var(--gold);font-size:1.2rem;font-weight:500"></p>
+      <p id="mDesc" style="color:var(--muted);margin-top:8px"></p>
+
+      <form class="form" id="orderForm">
+        <div class="row">
+          <input name="customer" placeholder="ชื่อผู้สั่ง *" required>
+          <input name="phone" type="tel" placeholder="เบอร์โทร *" required>
+        </div>
+        <input name="delivery_date" type="date" title="วันที่ต้องการรับ">
+        <textarea name="address" rows="2" placeholder="ที่อยู่จัดส่ง (ถ้ามารับเองเว้นว่างได้)"></textarea>
+        <textarea name="note" rows="2" placeholder="ข้อความบนการ์ด / รายละเอียดเพิ่มเติม"></textarea>
+        <button type="submit" class="btn btn-dark">ยืนยันการสั่งซื้อ</button>
+      </form>
+
+      <div class="done" id="orderDone" hidden>
+        <div class="done-icon">✓</div>
+        <h3>สรุปออเดอร์ของคุณ</h3>
+        <p id="doneText"></p>
+        <pre id="doneSummary"></pre>
+        <button class="btn btn-line" id="sendLine">ส่งรายละเอียดทาง LINE</button>
+        <button class="btn btn-dark" id="doneClose">ปิด</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="catalog.js"></script>
+<script src="script.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

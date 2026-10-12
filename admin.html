@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>หลังบ้าน | Mine Flowerz</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Prompt:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="login" class="login" hidden>
+  <form id="loginForm" class="login-box">
+    <div class="logo">Mine Flowerz</div>
+    <p style="color:var(--muted)">ระบบจัดการร้าน</p>
+    <input name="password" type="password" placeholder="รหัสผ่าน" autocomplete="current-password" required>
+    <button class="btn">เข้าสู่ระบบ</button>
+    <p class="err" id="loginErr"></p>
+    <p class="hint" id="loginHint" hidden>รหัสเริ่มต้นคือ <b>mine1234</b> เข้าไปเปลี่ยนได้ที่เมนู "ตั้งค่า"</p>
+  </form>
+</div>
+
+<div id="app" class="app" hidden>
+  <aside class="side">
+    <div class="logo">Mine Flowerz</div>
+    <nav>
+      <button data-tab="dash" class="active">📊 ภาพรวม</button>
+      <button data-tab="orders">🧾 ออเดอร์ <b id="newBadge" hidden></b></button>
+      <button data-tab="products">💐 สินค้า</button>
+      <button data-tab="settings">⚙️ ตั้งค่า</button>
+    </nav>
+    <a href="index.html" target="_blank">🌐 ดูหน้าเว็บ</a>
+    <button class="logout">🚪 ออกจากระบบ</button>
+  </aside>
+
+  <main>
+    <section id="tab-dash" class="tab">
+      <h1>ภาพรวมร้าน</h1>
+      <div class="stats" id="stats"></div>
+      <div class="panel"><h3>ออเดอร์ล่าสุด</h3><div id="recent"></div></div>
+    </section>
+
+    <section id="tab-orders" class="tab" hidden>
+      <div class="bar">
+        <h1>ออเดอร์</h1>
+        <div class="seg" id="orderFilter">
+          <button data-s="" class="active">ทั้งหมด</button>
+          <button data-s="new">ใหม่</button>
+          <button data-s="confirmed">ยืนยันแล้ว</button>
+          <button data-s="done">ส่งแล้ว</button>
+          <button data-s="cancelled">ยกเลิก</button>
+        </div>
+      </div>
+      <div class="panel"><div id="orderList"></div></div>
+    </section>
+
+    <section id="tab-products" class="tab" hidden>
+      <div class="bar">
+        <h1>สินค้า</h1>
+        <input id="search" placeholder="ค้นหาสินค้า...">
+        <button class="btn" id="addProduct">+ เพิ่มสินค้า</button>
+      </div>
+      <div class="pgrid" id="productList"></div>
+    </section>
+
+    <section id="tab-settings" class="tab" hidden>
+      <h1>ตั้งค่าร้าน</h1>
+      <div class="stack">
+        <form id="settingsForm" class="panel form2"></form>
+        <div class="panel">
+          <h3>สำรองข้อมูล</h3>
+          <p class="hint">ข้อมูลทั้งหมดเก็บอยู่ในเบราว์เซอร์เครื่องนี้ ควรกด "ดาวน์โหลดไฟล์สำรอง" เก็บไว้เป็นประจำ และใช้ไฟล์นี้ย้ายข้อมูลไปเครื่องอื่นได้ด้วย</p>
+          <div class="backup">
+            <button class="btn-o" id="exportBtn">⬇️ ดาวน์โหลดไฟล์สำรอง</button>
+            <label class="btn-o">⬆️ นำเข้าไฟล์สำรอง<input type="file" id="importFile" accept=".json,application/json" hidden></label>
+          </div>
+        </div>
+        <p><button class="btn-o logout">ออกจากระบบ</button></p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="pModal">
+  <form class="mbox" id="productForm">
+    <h2 id="pTitle">เพิ่มสินค้า</h2>
+    <label class="upload">
+      <div id="preview"></div>
+      <input type="file" name="image" accept="image/*" hidden>
+    </label>
+    <input name="name" placeholder="ชื่อสินค้า *" required>
+    <div class="r2">
+      <input name="category" list="cats" placeholder="หมวดหมู่ (เช่น ช่อดอกไม้)">
+      <input name="price" type="number" min="0" step="1" placeholder="ราคา (บาท) — 0 = สอบถามราคา">
+    </div>
+    <datalist id="cats"></datalist>
+    <textarea name="description" rows="3" placeholder="รายละเอียดสินค้า"></textarea>
+    <div class="check">
+      <label><input type="checkbox" name="featured"> ⭐ สินค้าแนะนำ</label>
+      <label><input type="checkbox" name="active"> แสดงบนหน้าเว็บ</label>
+    </div>
+    <div class="mfoot">
+      <button type="button" class="btn-o cancel">ยกเลิก</button>
+      <button class="btn" type="submit">บันทึก</button>
+    </div>
+  </form>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="catalog.js"></script>
+<script src="script.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

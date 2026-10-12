@@ -1,0 +1,107 @@
+:root{--navy:#0a2238;--deep:#123d5c;--aqua:#6bb7c7;--mist:#eef6f8;--gold:#c8a86b;--text:#1f3447;--muted:#7a8fa0;--line:#e3edf1}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font-family:'Prompt',sans-serif;font-weight:300;color:var(--text);background:var(--mist)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--gold)}
+.btn{background:linear-gradient(135deg,var(--gold),#e2cc9a);color:var(--navy);border:0;padding:11px 22px;border-radius:12px;font:inherit;font-weight:500;cursor:pointer}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn-o{background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:10px;font:inherit;cursor:pointer;display:inline-block;color:inherit}
+.btn-o:hover{border-color:var(--aqua)}
+.icon{background:none;border:0;cursor:pointer;font-size:1.1rem;padding:6px}
+input,textarea,select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff;color:inherit}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--aqua)}
+.hint{font-size:.85rem;color:var(--muted);background:var(--mist);padding:10px 12px;border-radius:10px}
+
+/* ล็อกอิน */
+.login{min-height:100vh;display:grid;place-items:center;background:linear-gradient(160deg,var(--navy),var(--deep))}
+.login-box{background:#fff;padding:44px 36px;border-radius:20px;width:min(380px,92%);display:grid;gap:14px;text-align:center}
+.err{color:#b33;font-size:.9rem;min-height:1em}
+
+/* โครงหลัก */
+.app{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+.side{background:var(--navy);color:#cfdbe3;padding:28px 18px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh}
+.side .logo{margin-bottom:24px;padding-left:10px}
+.side nav{display:grid;gap:4px;flex:1;align-content:start}
+.side nav button,.side>a,.side>button{background:none;border:0;color:inherit;font:inherit;text-align:left;padding:12px 14px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:8px;text-decoration:none}
+.side nav button.active,.side nav button:hover,.side>a:hover,.side>button:hover{background:rgba(107,183,199,.15);color:#fff}
+.side nav b{margin-left:auto;background:var(--gold);color:var(--navy);border-radius:999px;padding:0 9px;font-size:.8rem}
+main{padding:34px clamp(16px,4vw,44px);max-width:1200px;width:100%}
+h1{font-size:1.6rem;font-weight:500;color:var(--navy);margin-bottom:20px}
+.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.bar h1{margin:0 auto 0 0}
+.bar input{width:220px}
+.stack{display:grid;gap:20px;max-width:720px}
+
+/* ภาพรวม */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:24px}
+.stat{background:#fff;border-radius:16px;padding:22px;border-left:3px solid var(--gold)}
+.stat span{color:var(--muted);font-size:.88rem}
+.stat b{display:block;font-size:1.8rem;font-weight:500;color:var(--navy)}
+.panel{background:#fff;border-radius:16px;padding:22px}
+.panel h3{font-weight:500;margin-bottom:12px}
+.muted{color:var(--muted);text-align:center;padding:30px}
+
+/* ออเดอร์ */
+.seg{display:flex;background:#fff;border-radius:12px;padding:4px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:none;padding:8px 14px;border-radius:9px;font:inherit;cursor:pointer;color:var(--muted)}
+.seg button.active{background:var(--navy);color:#fff}
+.order{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.order:last-child{border:0}
+.o-main{flex:1;min-width:0}
+.o-top{display:flex;gap:10px;align-items:center;margin-bottom:4px;flex-wrap:wrap}
+.pill{font-size:.75rem;padding:2px 10px;border-radius:999px;font-weight:500}
+.o-meta{font-size:.9rem;color:#4a6072}
+.o-meta a{color:var(--deep)}
+.o-note{font-size:.88rem;background:var(--mist);padding:8px 12px;border-radius:8px;margin-top:6px}
+.o-time{font-size:.78rem;color:var(--muted);margin-top:4px}
+.o-act{display:flex;align-items:flex-start;gap:6px}
+.o-act select{width:140px}
+
+/* สินค้า */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.pcard{background:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.pcard.off{opacity:.55}
+.pimg{aspect-ratio:3/4;background:var(--mist);overflow:hidden;display:grid;place-items:center;font-size:2.5rem}
+.pimg img{width:100%;height:100%;min-height:0;object-fit:contain}
+.pinfo{padding:14px 16px;flex:1;display:grid;gap:2px}
+.pinfo small{color:var(--aqua)}
+.pinfo span{color:var(--gold);font-weight:500}
+.tags i{font-style:normal;font-size:.75rem;background:var(--mist);padding:2px 8px;border-radius:6px;margin-right:4px}
+.pact{display:flex;justify-content:space-between;padding:0 16px 14px}
+
+/* ป๊อปอัปสินค้า */
+.modal{position:fixed;inset:0;background:rgba(10,34,56,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.modal.open{display:flex}
+.mbox{background:#fff;border-radius:18px;padding:28px;width:min(560px,100%);max-height:92vh;overflow:auto;display:grid;gap:12px}
+.mbox h2{font-weight:500;color:var(--navy)}
+.upload{display:block;cursor:pointer}
+#preview{aspect-ratio:16/9;border:2px dashed var(--line);border-radius:12px;display:grid;place-items:center;color:var(--muted);overflow:hidden}
+#preview img{width:100%;height:100%;min-height:0;object-fit:contain}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check{display:flex;gap:20px;flex-wrap:wrap}
+.check label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.check input{width:auto}
+.mfoot{display:flex;justify-content:flex-end;gap:10px}
+
+/* ตั้งค่า */
+.form2{display:grid;gap:14px}
+.form2 label span{display:block;font-size:.88rem;color:var(--muted);margin-bottom:4px}
+.backup{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(140px);background:var(--navy);color:#fff;padding:12px 24px;border-radius:999px;transition:.4s;z-index:100;border:1px solid var(--gold);max-width:92%;text-align:center}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* มือถือ: เมนูย้ายไปด้านล่าง */
+@media(max-width:800px){
+  .app{grid-template-columns:1fr}
+  .side{position:fixed;bottom:0;top:auto;height:auto;width:100%;flex-direction:row;padding:6px;z-index:40}
+  .side .logo,.side>a,.side>button{display:none}
+  .side nav{grid-template-columns:repeat(4,1fr);width:100%}
+  .side nav button{flex-direction:column;font-size:.72rem;padding:8px 4px;gap:2px;justify-content:center;text-align:center}
+  .side nav b{margin:0}
+  main{padding-bottom:100px}
+  .order{flex-direction:column}
+  .r2{grid-template-columns:1fr}
+  .bar input{width:100%}
+  .toast{bottom:90px}
+}
